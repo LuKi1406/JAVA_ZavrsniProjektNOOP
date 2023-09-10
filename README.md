@@ -4,3 +4,6 @@ App that can be used as a book store, or any other store depending on a consumer
  --><b> MVC architecture </b>
  --> <b>Command and Strategy pattern</b>
  --> <b>Event Driven programming</b>
+
+ UMLet diagram:
+ ![alt text](https://github.com/LuKi1406/JAVA_ZavrsniProjektNOOP/blob/main/src/diagCls.png)
