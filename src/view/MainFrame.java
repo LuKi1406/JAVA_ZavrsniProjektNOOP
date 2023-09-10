@@ -35,7 +35,7 @@ public class MainFrame extends JFrame {
 
    
     public MainFrame() {
-        super("Bookshop");
+        super("Bookshop products");
         setSize(1100, 600);
         setLocationRelativeTo(null);
         setVisible(true);
