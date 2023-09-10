@@ -1,0 +1,642 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="15.1.0">
+  <zoom_level>10</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>10</x>
+      <y>10</y>
+      <w>620</w>
+      <h>1450</h>
+    </coordinates>
+    <panel_attributes>view::DataFields
+--
+-customerName: JTextField
+-lastName: JTextField
+-address: JTextField
+-email: JTextField
+-numProds: JCheckBox
+-numProds1: JCheckBox
+-numProds2: JCheckBox
+-numProds3: JCheckBox
+-numProds4: JCheckBox
+-prodNme: JRadioButton
+-prodNme1: JRadioButton
+-prodNme2: JRadioButton
+-prodNme3: JRadioButton
+-homeDel: JCheckBox
+-pickUpDel: JCheckBox
+-officeDelivery: JCheckBox
+-expressDelivery: JRadioButton
+-normalDelivery: JRadioButton
+-submitButton: JButton
+-checkboxGroup: ButtonGroup
+-checkboxGroup2: ButtonGroup
+-radioButtonGrp: ButtonGroup
+-radioButtonGroup: ButtonGroup
+-wayOfPaymentCombo: JComboBox&lt;WayOfPaymentStrategy&gt;
+-orderDetailsFormListener: OrderDetailsFormListener
+-orderDetail: OrderDetail
+--
++DataFields(): ctor
++createComponents(): void
+-activeDataFields(): void
++resetAllData(): void
++getCustomerName(): JTextField
++setCustomerName(JTextField customerName): void
++getLastName(): JTextField
++setLastName(JTextField lastName): void
++getAddress(): JTextField
++setAddress(JTextField address): void
++getEmail(): JTextField
++setEmail(JTextField email): void
++getNumProds(): JCheckBox
++setNumProds(JCheckBox numProds): void
++getNumProds1(): JCheckBox
++setNumProds1(JCheckBox numProds1): void
++getNumProds2(): JCheckBox
++setNumProds2(JCheckBox numProds2): void
++getNumProds3(): JCheckBox
++setNumProds3(JCheckBox numProds3): void
++getNumProds4(): JCheckBox
++setNumProds4(JCheckBox numProds4): void
++getProdNme(): JRadioButton
++setProdNme(JRadioButton prodNme): void
++getProdNme1(): JRadioButton
++setProdNme1(JRadioButton prodNme1): void
++getProdNme2(): JRadioButton
++setProdNme2(JRadioButton prodNme2): void
++getProdNme3(): JRadioButton
++setProdNme3(JRadioButton prodNme3): void
++getHomeDel(): JCheckBox
++setHomeDel(JCheckBox homeDel): void
++getPickUpDel(): JCheckBox
++setPickUpDel(JCheckBox pickUpDel): void
++getOfficeDelivery(): JCheckBox
++setOfficeDelivery(JCheckBox officeDelivery): void
++getExpressDelivery(): JRadioButton
++setExpressDelivery(JRadioButton expressDelivery): void
++getNormalDelivery(): JRadioButton
++setNormalDelivery(JRadioButton normalDelivery): void
++getSubmitButton(): JButton
++setSubmitButton(JButton submitButton): void
++getCheckboxGroup(): ButtonGroup
++setCheckboxGroup(ButtonGroup checkboxGroup): void
++getCheckboxGroup2(): ButtonGroup
++setCheckboxGroup2(ButtonGroup checkboxGroup2): void
++getRadioButtonGrp(): ButtonGroup
++setRadioButtonGrp(ButtonGroup radioButtonGrp): void
++getRadioButtonGroup(): ButtonGroup
++setRadioButtonGroup(ButtonGroup radioButtonGroup): void
++getWayOfPaymentCombo(): JComboBox&lt;WayOfPaymentStrategy&gt;
++setWayOfPaymentCombo(JComboBox&lt;WayOfPaymentStrategy&gt; wayOfPaymentCombo): void
++getOrderDetailsFormListener(): OrderDetailsFormListener
++setOrderDetailsFormListener(OrderDetailsFormListener orderDetailsFormListener): void
++getOrderDetail(): OrderDetail
++setOrderDetail(OrderDetail orderDetail): void
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>640</x>
+      <y>10</y>
+      <w>1260</w>
+      <h>700</h>
+    </coordinates>
+    <panel_attributes>model::OrderDetail
+--
+-id: int
+-counter = 1: int
+-cstName: String
+-cstLastName: String
+-cstAddress: String
+-cstEmail: String
+-prodNme: String
+-numProd: String
+-placeOfDelivery: String
+-deliveryType: String
+-wayOfPaymentStrategy: WayOfPaymentStrategy
+-paymentStrategy: String
+--
++OrderDetail(): ctor
++OrderDetail(String cstName, String cstLastName, String cstAddress, String cstEmail, String prod_name, String numProd, String placeOfDelivery, String deliveryType, String paymentStrategy): ctor
++OrderDetail(int id, String cstName, String cstLastName, String cstAddress, String cstEmail, String prodNme, String numProd, String placeOfDelivery, String deliveryType, String paymentStrategy): ctor
++getCstName(): String
++setCstName(String cstName): void
++getCstLastName(): String
++setCstLastName(String cstLastName): void
++getCstAddress(): String
++setCstAddress(String cstAddress): void
++getCstEmail(): String
++setCstEmail(String cstEmail): void
++getId(): int
++setId(int id): void
++getProdNme(): String
++setProdNme(String prodNme): void
++getNumProd(): String
++setNumProd(String numProd): void
++getPlaceOfDelivery(): String
++setPlaceOfDelivery(String placeOfDelivery): void
++getDeliveryType(): String
++setDeliveryType(String deliveryType): void
++getPaymentStrategy(): String
++setPaymentStrategy(String paymentStrategy): void
++info(): void
++setCounter(int cnt): void
++toString(): String
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1910</x>
+      <y>10</y>
+      <w>3310</w>
+      <h>450</h>
+    </coordinates>
+    <panel_attributes>view::ProdShopPanel
+--
+-checkboxGroup2: ButtonGroup
+-numProds: JCheckBox
+-numProds1: JCheckBox
+-numProds2: JCheckBox
+-numProds3: JCheckBox
+-numProds4: JCheckBox
+-radioButtonGrp: ButtonGroup
+-prodNme: JRadioButton
+-prodNme1: JRadioButton
+-prodNme2: JRadioButton
+-prodNme3: JRadioButton
+-submitButton: JButton
+-checkboxGroup: ButtonGroup
+-homeDel: JCheckBox
+-pickUpDel: JCheckBox
+-officeDelivery: JCheckBox
+-radioButtonGroup: ButtonGroup
+-normalDelivery: JRadioButton
+-expressDelivery: JRadioButton
+--
++ProdShopPanel(ButtonGroup checkboxGroup2, JCheckBox numProds, JCheckBox numProds1, JCheckBox numProds2, JCheckBox numProds3, JCheckBox numProds4, ButtonGroup radioButtonGrp, JRadioButton prodNme, JRadioButton prodNme1, JRadioButton prodNme2, JRadioButton prodNme3, JButton submitButton, ButtonGroup checkboxGroup, JCheckBox homeDel, JCheckBox pickUpDel, JCheckBox officeDelivery, ButtonGroup radioButtonGroup, JRadioButton normalDelivery, JRadioButton expressDelivery): ctor
+-setSizeOfShopPanel(): void
+-setBorderShopPnl(): void
+-layoutAllShopComps(): void
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>5230</x>
+      <y>10</y>
+      <w>410</w>
+      <h>380</h>
+    </coordinates>
+    <panel_attributes>view::OrderDetailEvent
+--
+-name: String
+-lastName: String
+-address: String
+-email: String
+-prodNme: String
+-numProd: String
+-placeOfDel: String
+-delTyp: String
+-pymStr: String
+--
++OrderDetailEvent(Object source, OrderDetail orderDetail): ctor
++getName(): String
++getLastName(): String
++getAddress(): String
++getEmail(): String
++getProdNme(): String
++getNumProd(): String
++getPlaceOfDel(): String
++getDelTyp(): String
++getPymStr(): String
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>10</x>
+      <y>1470</y>
+      <w>470</w>
+      <h>360</h>
+    </coordinates>
+    <panel_attributes>view::ViewPanel
+--
+-jTextPane: JTextPane
+-appPopUpMenu: AppPopUpMenu
+~undoManager = new UndoManager(): UndoManager
+-doc: StyledDocument
+-attributes: SimpleAttributeSet
+-tabModel: AbstractTableModel
+-table: JTable
+-orderDetails: List&lt;OrderDetail&gt;
+--
++ViewPanel(CustomerInformationPanel customerInformationPanel): ctor
+-initializeAllComponents(): void
+-setSizeOfTextAreaPanel(): void
++setTextToPanel(String text): void
++clearAllTextFromArea(): void
++getAll(): String
++getjTextPane(): JTextPane
++showOnTextArea(OrderDetail ord): void
++showImportedDataInTextPanel(List&lt;OrderDetail&gt; data): void
++setOrderDetails(DataBase dataBase): void
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>490</x>
+      <y>1470</y>
+      <w>490</w>
+      <h>290</h>
+    </coordinates>
+    <panel_attributes>controller::Controller
+--
+-dataBase: DataBase
+--
++Controller(): ctor
++addNewOrderDetailsToDataBase(OrderDetail orderDetail): void
++getAllOrderDetailsFromDataBase(): List&lt;OrderDetail&gt;
++listAllOrderDetailsInDataBase(): void
++saveDataToTextFile(File file): void
++loadDataFromTextFile(File file): void
++connectToDataBase(): void
++disconnectFromDataBase(): void
++saveDataToDataBase(): void
++loadDataToDataBase(): void
++showImportedDataInTextPanel(ViewPanel viewPanel): void
++showOrderDetailData(ViewPanel viewPanel, OrderDetail orderDetail): void
++setData(ViewPanel viewPanel): void
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>990</x>
+      <y>1470</y>
+      <w>360</w>
+      <h>280</h>
+    </coordinates>
+    <panel_attributes>view::MainFrame
+--
+-prodShopPnl: ProdShopPanel
+-customerInformationPanel: CustomerInformationPanel
+-wayOfPaymentPanel: WayOfPaymentPanel
+-viewPanel: ViewPanel
+-menuBar: JMenuBar
+-dataFields: DataFields
+-controller: Controller
+-dataBase: DataBase
+--
++MainFrame(): ctor
+-initializeAllComponents(): void
+-setFormLayout(): void
+-createMenuBar(ViewPanel viewPanel): JMenuBar
+-activateMainFrame(): void
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1360</x>
+      <y>1470</y>
+      <w>360</w>
+      <h>260</h>
+    </coordinates>
+    <panel_attributes>model::DataBase
+--
+-orderDetails: List&lt;OrderDetail&gt;
+-connection: Connection
+--
++DataBase(): ctor
++addOrderDetails(OrderDetail orderDetail): void
++getAllOrderDetailsFromDataBase(): List&lt;OrderDetail&gt;
++listAllOrderDetailsInDataBase(): void
++loadDataFromDataBaseServer(): void
++saveDataToDataBaseServer(): void
++connect(): void
++disconnect(): void
++saveToFile(File file): void
++readFromFile(File file): void
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1730</x>
+      <y>1470</y>
+      <w>410</w>
+      <h>190</h>
+    </coordinates>
+    <panel_attributes>controller::AppPopUpMenu
+--
+-menuListener: ActionListener
+-copyItem: JMenuItem
+-pasteItem: JMenuItem
+-cutItem: JMenuItem
+-selectAllItem: JMenuItem
+--
++AppPopUpMenu(CommandManager commandManager): ctor
++setPopUpMenuActionListener(ActionListener listener): void
+-initPopUpMenuItems(): void
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>2150</x>
+      <y>1470</y>
+      <w>770</w>
+      <h>190</h>
+    </coordinates>
+    <panel_attributes>view::CustomerInformationPanel
+--
+-customerName: JTextField
+-lastName: JTextField
+-address: JTextField
+-email: JTextField
+--
++CustomerInformationPanel(JTextField customerName, JTextField lastName, JTextField address, JTextField email): ctor
+-setSizeCustmInfPnl(): void
+-setBorderCustmInfPnl(): void
+-setLayoutCustmComps(): void
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>2930</x>
+      <y>1470</y>
+      <w>320</w>
+      <h>160</h>
+    </coordinates>
+    <panel_attributes>controller::CommandManager
+--
+-jTextPane: JTextPane
+--
++CommandManager(ViewPanel viewPanel): ctor
++cut(): void
++copy(): void
++paste(): void
++selectAll(): void
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>10</x>
+      <y>1840</y>
+      <w>170</w>
+      <h>140</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;interface&gt;&gt;
+controller::AllCommands
+--
+--
+~cut(): void
+~copy(): void
+~paste(): void
+~selectAll(): void
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>190</x>
+      <y>1840</y>
+      <w>410</w>
+      <h>140</h>
+    </coordinates>
+    <panel_attributes>controller::MousePopUpListener
+--
+-appPopUpMenu: AppPopUpMenu
+--
++MousePopUpListener(AppPopUpMenu appPopUpMenu): ctor
++mousePressed(MouseEvent mev): void
++mouseReleased(MouseEvent mev): void
+-doSomething(MouseEvent mev): void
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>610</x>
+      <y>1840</y>
+      <w>590</w>
+      <h>140</h>
+    </coordinates>
+    <panel_attributes>view::WayOfPaymentPanel
+--
+-wayOfPaymentCombo: JComboBox&lt;WayOfPaymentStrategy&gt;
+--
++WayOfPaymentPanel(JComboBox&lt;WayOfPaymentStrategy&gt; wayOfPaymentCombo): ctor
+-setSizeOfWayOfPaymentPanel(): void
+-setBorderOfWayOfPaymentPanel(): void
+-layoutAllWayOfPaymentComponents(): void
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1210</x>
+      <y>1840</y>
+      <w>320</w>
+      <h>120</h>
+    </coordinates>
+    <panel_attributes>view::UndoRedoHandler
+--
+-viewPanel: ViewPanel
+--
++UndoRedoHandler(ViewPanel viewPanel): ctor
++undo(): void
++redo(): void
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1540</x>
+      <y>1840</y>
+      <w>800</w>
+      <h>110</h>
+    </coordinates>
+    <panel_attributes>view::DefaultPromptMsgRenderer
+--
+-msg: String
+--
++DefaultPromptMsgRenderer(String msg): ctor
++getListCellRendererComponent(JList&lt;?&gt; list, Object value, int index, boolean isSelected, boolean cellHasFocus): Component
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>2350</x>
+      <y>1840</y>
+      <w>280</w>
+      <h>110</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;interface&gt;&gt;
+view::MenuBarListener
+--
+--
+~readObjectTooPanel(String content): void
+~saveObjectTooFile(): String
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>2640</x>
+      <y>1840</y>
+      <w>230</w>
+      <h>90</h>
+    </coordinates>
+    <panel_attributes>view::CreditCardPaymentStrategy
+--
+--
++payment(): String
++toString(): String
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>2880</x>
+      <y>1840</y>
+      <w>230</w>
+      <h>90</h>
+    </coordinates>
+    <panel_attributes>view::GooglePayPaymentStrategy
+--
+--
++payment(): String
++toString(): String
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>10</x>
+      <y>1990</y>
+      <w>450</w>
+      <h>90</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;interface&gt;&gt;
+view::OrderDetailsFormListener
+--
+--
+~orderDetailsEventOccurred(OrderDetailEvent orderDetailEvent): void
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>470</x>
+      <y>1990</y>
+      <w>210</w>
+      <h>90</h>
+    </coordinates>
+    <panel_attributes>view::PayPalPaymentStrategy
+--
+--
++payment(): String
++toString(): String
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>690</x>
+      <y>1990</y>
+      <w>200</w>
+      <h>90</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;interface&gt;&gt;
+view::WayOfPaymentStrategy
+--
+--
+~payment(): String
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>900</x>
+      <y>1990</y>
+      <w>210</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>test_server_db::AppTestServer
+--
+--
++main(String[] args): void
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1120</x>
+      <y>1990</y>
+      <w>180</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>view::Client
+--
+--
++main(String[] args): void
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+</diagram>
